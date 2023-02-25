@@ -1,54 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap|Sofia");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+
+
+
 /* css reset*/
+
 *,
 ::after,
 ::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: rgb(255, 255, 255, 0.7);
 }
 
-.create-task-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+body{
+    background-color: #1d2a35;
 }
 
-.create-task-form__title {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-
-.create-task-form__input,
-.create-task-form__textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.create-task-form__input:focus,
-.create-task-form__textarea:focus {
-    outline: none;
-    border-color: #0077ff;
-}
-
-.create-task-form__button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #0077ff;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.create-task-form__button:hover {
-    background-color: #005ce6;
-}
