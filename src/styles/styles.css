@@ -21,6 +21,7 @@ body{
     background-color: #1d2a35;
 }
 
+
 .icon path {
   fill:#22d3ee;
   stroke: none;
@@ -55,3 +56,23 @@ body{
     @apply pb-4 border-b-2 border-slate-500;
 }
 
+/*==== form styles ====*/
+
+.create-task-form{
+    @apply flex flex-col gap-y-3 mx-auto ;
+    @apply w-11/12 xsm:w-9/12 md:w-6/12 lg:w-5/12;
+}
+
+.task-item{
+    @apply bg-cyan-900  mx-auto mt-4 shadow shadow-cyan-50 p-2;
+    @apply w-11/12 xsm:w-9/12 md:w-6/12 lg:w-5/12;
+    
+}
+
+.btn{
+    @apply text-white bg-cyan-600 font-bold hover:bg-cyan-700 p-1 rounded-sm transition duration-300 ease-linear
+}
+
+.btn-clear{
+    @apply mt-3 mx-auto block w-full ;
+}

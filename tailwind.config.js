@@ -6,6 +6,10 @@ module.exports = {
 			fontFamily: {
 				sans: ["Montserrat", "Helvetica", "Arial", "sans-serif"],
 			},
+
+			screens: {
+				xsm: "500px",
+			},
 		},
 	},
 	plugins: [

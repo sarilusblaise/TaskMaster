@@ -3,7 +3,7 @@ import { AiFillDelete } from "react-icons/ai";
 
 export default function TaskItem() {
 	return (
-		<section className='bg-cyan-900 w-11/12 mx-auto mt-4 shadow shadow-cyan-50 px-2'>
+		<section className='task-item'>
 			<article className='task'>
 				<div className='taskName-container'>
 					<label htmlFor='taskStatus' className='label'>
@@ -30,6 +30,10 @@ export default function TaskItem() {
 					de mon fils.{" "}
 				</p>
 			</article>
+
+			<button type='button' className='btn btn-clear'>
+				CLEAR COMPLETED TASKS
+			</button>
 		</section>
 	);
 }

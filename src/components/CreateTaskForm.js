@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const CreateTaskForm = () => {
 	return (
-		<form className='flex flex-col gap-y-3  w-11/12 mx-auto'>
+		<form className='create-task-form'>
 			<input
 				className='p-2 border-b-2 border-slate-400 focus:outline-none focus:border-b-2 focus:border-slate-50 bg-cyan-900 shadow-sm shadow-cyan-500'
 				type='text'
@@ -16,10 +16,7 @@ const CreateTaskForm = () => {
 				name='taskDescription '
 				placeholder='describe the task'
 			/>
-			<button
-				className='bg-cyan-700 font-bold hover:bg-cyan-600 p-1 rounded-sm transition duration-300 ease-linear'
-				type='submit'
-			>
+			<button className='btn btn-submit' type='submit'>
 				CREATE TASK
 			</button>
 		</form>
