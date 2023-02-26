@@ -2,11 +2,14 @@
 module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				sans: ["Montserrat", "Helvetica", "Arial", "sans-serif"],
+			},
+		},
 	},
 	plugins: [
 		require("@tailwindcss/forms")({
-			// only generate global styles
 			strategy: "class", // only generate classes
 		}),
 	],

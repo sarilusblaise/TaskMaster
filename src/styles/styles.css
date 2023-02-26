@@ -21,3 +21,37 @@ body{
     background-color: #1d2a35;
 }
 
+.icon path {
+  fill:#22d3ee;
+  stroke: none;
+  stroke-width: 0;
+@apply transition-all duration-300 ease-linear;
+}
+
+.icon{
+    font-size: 1.5rem;
+}
+
+.icon path:hover{
+    fill:#a5f3fc;
+}
+
+.label{
+    @apply pb-4 pt-2 font-bold text-center;
+
+}
+
+.icon-container button:first-child{
+    margin-right: 2rem
+
+}
+
+.taskName-container{
+    @apply flex justify-between items-center;
+
+}
+
+.task:not(:last-child){
+    @apply pb-4 border-b-2 border-slate-500;
+}
+
