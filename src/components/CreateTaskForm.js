@@ -17,9 +17,10 @@ const CreateTaskForm = () => {
 			}}
 		>
 			<input
-				className='p-2 border-b-2 border-slate-400 focus:outline-none focus:border-b-2 focus:border-slate-50 bg-cyan-900 shadow-sm shadow-cyan-500'
+				className='create-task-form__input'
 				type='text'
 				name='task'
+				maxLength={20}
 				placeholder='enter your task name*'
 				required
 				value={taskName}
@@ -27,7 +28,7 @@ const CreateTaskForm = () => {
 			/>
 
 			<textarea
-				className='p-2 border-b-2 border-slate-400 focus:outline-none focus:border-b-2 focus:border-slate-50 bg-cyan-900 shadow-sm shadow-cyan-500'
+				className='create-task-form__textarea'
 				name='taskDescription '
 				placeholder='describe the task'
 				value={taskDescription}

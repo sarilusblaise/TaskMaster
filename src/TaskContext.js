@@ -4,6 +4,7 @@ import taskReducer from "./TaskReducer";
 import { v4 as uuidv4 } from "uuid";
 
 const TaskContext = createContext(null);
+let nextId = 4;
 export default function TaskProvider({ children }) {
 	const [tasks, dispatch] = useReducer(taskReducer, initialTasks);
 
@@ -11,15 +12,17 @@ export default function TaskProvider({ children }) {
 		dispatch({
 			type: "added",
 			newTask: {
-				id: uuidv4(),
+				id: nextId++,
 				name,
 				description,
 				done: false,
 			},
 		});
 
+	const removeTask = (id) => dispatch({ type: "removed", id });
+
 	return (
-		<TaskContext.Provider value={{ tasks, addTask }}>
+		<TaskContext.Provider value={{ tasks, addTask, removeTask, dispatch }}>
 			{children}
 		</TaskContext.Provider>
 	);

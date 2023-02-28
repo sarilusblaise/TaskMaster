@@ -1,44 +1,40 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
-import { useState } from "react";
 import { useGlobalContext } from "../TaskContext";
-
-export default function TaskItem() {
-	const { tasks } = useGlobalContext();
+export default function TaskItem({ task }) {
+	const { removeTask, dispatch } = useGlobalContext();
 	return (
-		<section className='task-item'>
-			{tasks.map((task) => {
-				const { id, name, description, done } = task;
-				return (
-					<article key={id} className='task'>
-						<div className='taskName-container'>
-							<label htmlFor='taskStatus' className='label'>
-								<input
-									id='taskStatus'
-									name='taskStatus'
-									type='checkbox'
-									className='form-checkbox mr-3 rounded-sm '
-								/>
-								{name}
-							</label>
-							<div className='icon-container'>
-								<button>
-									<FaEdit className='icon' />
-								</button>
-								<button>
-									<AiFillDelete className='icon' />
-								</button>
-							</div>
-						</div>
+		<article className='task'>
+			<div className='taskName-container'>
+				<div className='task__input-container'>
+					<input
+						name='taskStatus'
+						type='checkbox'
+						checked={task.done}
+						onChange={(e) => {
+							dispatch({
+								type: "changed",
+								task: {
+									...task,
+									done: e.target.checked,
+								},
+							});
+						}}
+						className='task__input-checkbox '
+					/>
+					<input className='task__input-text' type='text' value={task.name} />
+				</div>
 
-						<p className='italic'>{description}</p>
-					</article>
-				);
-			})}
-
-			<button type='button' className='btn btn-clear'>
-				CLEAR COMPLETED TASKS
-			</button>
-		</section>
+				<button type='button' onClick={() => removeTask(task.id)}>
+					<AiFillDelete className='icon' />
+				</button>
+			</div>
+			<textarea
+				className='task__textarea'
+				name=''
+				id=''
+				value={task.description}
+			></textarea>
+		</article>
 	);
 }

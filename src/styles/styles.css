@@ -37,24 +37,14 @@ body{
     fill:#a5f3fc;
 }
 
-.label{
-    @apply pb-4 pt-2 font-bold text-center;
 
-}
 
 .icon-container button:first-child{
     margin-right: 2rem
 
 }
 
-.taskName-container{
-    @apply flex justify-between items-center;
 
-}
-
-.task:not(:last-child){
-    @apply pb-4 border-b-2 border-slate-500;
-}
 
 /*==== form styles ====*/
 
@@ -63,6 +53,14 @@ body{
     @apply w-11/12 xsm:w-9/12 md:w-6/12 lg:w-5/12;
 }
 
+.create-task-form__input{
+    @apply p-2 border-b-2 border-slate-400 focus:outline-none focus:border-b-2 focus:border-slate-50 bg-cyan-900 shadow-sm shadow-cyan-500
+}
+
+.create-task-form__textarea{
+    @apply p-2 border-b-2 border-slate-400 focus:outline-none focus:border-b-2 focus:border-slate-50 bg-cyan-900 shadow-sm shadow-cyan-500
+
+}
 .task-item{
     @apply bg-cyan-900  mx-auto mt-4 shadow shadow-cyan-50 p-2;
     @apply w-11/12 xsm:w-9/12 md:w-6/12 lg:w-5/12;
@@ -75,4 +73,32 @@ body{
 
 .btn-clear{
     @apply mt-3 mx-auto block w-full ;
+}
+
+/* task styes*/
+.taskName-container {
+    @apply flex justify-between items-center;
+
+}
+
+.task:not(:last-child) {
+    @apply pb-4 border-b-2 border-slate-500;
+}
+
+.task__input-container {
+    @apply pb-4 pt-2 font-bold w-full ;
+
+}
+.task__input-text, .task__textarea {
+    @apply bg-transparent
+}
+
+.task__input-text{
+    @apply w-9/12 
+}
+.task__input-checkbox{
+    @apply form-checkbox mr-3 rounded-sm
+}
+.task__textarea{
+    @apply w-full italic h-20
 }
