@@ -1,5 +1,6 @@
 import { useGlobalContext } from "../TaskContext";
 import TaskItem from "./TaskItem";
+import kidTaskMaster from "../assets/kidTaskMaster.png";
 
 export default function TaskList() {
 	const { tasks, removeTask } = useGlobalContext();
@@ -19,9 +20,14 @@ export default function TaskList() {
 	}
 
 	return (
-		<p>
-			Welcome to taskMaster, please fill out the form below and press the CREATE
-			TASK button to create your first task.
-		</p>
+		<section className='task-welcome'>
+			<p>
+				Welcome to taskMaster, please fill out the form below and press the
+				CREATE TASK button to create your first task.
+			</p>
+			<div className='task-img-container'>
+				<img src={kidTaskMaster} alt='kid character' />
+			</div>
+		</section>
 	);
 }

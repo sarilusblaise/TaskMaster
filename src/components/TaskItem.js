@@ -53,7 +53,7 @@ export default function TaskItem({ task }) {
 				onChange={(e) => {
 					e.target.style.height = "auto";
 					// Set the height to the scrollHeight (content height)
-					e.target.style.height = e.target.scrollHeight + "px";
+					e.target.style.height = e.target.scrollHeight - 20 + "px";
 					dispatch({
 						type: "modified",
 						task: {
