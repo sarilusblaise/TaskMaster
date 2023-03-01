@@ -7,7 +7,7 @@ export default function taskReducer(tasks, action) {
 		return tasks.filter((task) => task.id !== action.id);
 	}
 
-	if (action.type === "changed") {
+	if (action.type === "modified") {
 		return tasks.map((task) => {
 			if (task.id === action.task.id) {
 				return action.task;

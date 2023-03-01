@@ -1,6 +1,7 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import { useGlobalContext } from "../TaskContext";
+import { useState } from "react";
 export default function TaskItem({ task }) {
 	const { removeTask, dispatch } = useGlobalContext();
 	return (
@@ -8,21 +9,36 @@ export default function TaskItem({ task }) {
 			<div className='taskName-container'>
 				<div className='task__input-container'>
 					<input
+						className='task__input-checkbox '
 						name='taskStatus'
 						type='checkbox'
 						checked={task.done}
 						onChange={(e) => {
+							console.log(task);
 							dispatch({
-								type: "changed",
+								type: "modified",
 								task: {
 									...task,
 									done: e.target.checked,
 								},
 							});
 						}}
-						className='task__input-checkbox '
 					/>
-					<input className='task__input-text' type='text' value={task.name} />
+					<input
+						className='task__input-text'
+						type='text'
+						value={task.name}
+						onChange={(e) => {
+							dispatch({
+								type: "modified",
+								task: {
+									...task,
+									name: e.target.value,
+								},
+							});
+							console.log(task);
+						}}
+					/>
 				</div>
 
 				<button type='button' onClick={() => removeTask(task.id)}>
@@ -30,10 +46,23 @@ export default function TaskItem({ task }) {
 				</button>
 			</div>
 			<textarea
-				className='task__textarea'
+				className={"task__textarea"}
 				name=''
 				id=''
 				value={task.description}
+				onChange={(e) => {
+					e.target.style.height = "auto";
+					// Set the height to the scrollHeight (content height)
+					e.target.style.height = e.target.scrollHeight + "px";
+					dispatch({
+						type: "modified",
+						task: {
+							...task,
+							description: e.target.value,
+						},
+					});
+					console.log(task);
+				}}
 			></textarea>
 		</article>
 	);

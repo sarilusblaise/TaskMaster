@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useGlobalContext } from "../TaskContext";
 
 const CreateTaskForm = () => {
-	const [taskName, setTaskName] = useState();
-	const [taskDescription, setTaskDescription] = useState();
+	const [taskName, setTaskName] = useState("");
+	const [taskDescription, setTaskDescription] = useState("");
 	const { addTask } = useGlobalContext();
 	return (
 		<form
@@ -28,11 +28,16 @@ const CreateTaskForm = () => {
 			/>
 
 			<textarea
-				className='create-task-form__textarea'
+				className={"create-task-form__textarea"}
 				name='taskDescription '
 				placeholder='describe the task'
 				value={taskDescription}
-				onChange={(e) => setTaskDescription(e.target.value)}
+				onChange={(e) => {
+					e.target.style.height = "auto";
+					// Set the height to the scrollHeight (content height)
+					e.target.style.height = e.target.scrollHeight + "px";
+					setTaskDescription(e.target.value);
+				}}
 			/>
 			<button className='btn btn-submit' type='submit'>
 				CREATE TASK
