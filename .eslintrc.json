@@ -1,0 +1,24 @@
+
+{
+  "extends": ["eslint:recommended","plugin:react/recommended","plugin:react/jsx-runtime", "plugin:prettier/recommended"],
+  "plugins": [
+    "prettier",
+    "react"
+  ],
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+     "prettier/prettier": "error"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  }
+}
