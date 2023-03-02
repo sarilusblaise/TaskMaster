@@ -20,7 +20,6 @@ const CreateTaskForm = () => {
         className="create-task-form__input"
         type="text"
         name="task"
-        maxLength={20}
         placeholder="enter your task name*"
         required
         value={taskName}

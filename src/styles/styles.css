@@ -88,7 +88,7 @@ main {
 }
 .task__input-text,
 .task__textarea {
-  @apply bg-transparent p-2 /*focus:outline-none*/;
+  @apply bg-transparent pl-1 /*focus:outline-none*/;
 }
 
 .task__input-text {
@@ -101,6 +101,8 @@ main {
   @apply w-full italic;
   overflow-y: hidden;
 }
+
+/*task welcome*/
 .task-welcome {
   @apply w-11/12 xsm:w-9/12 md:w-6/12 lg:w-5/12;
   @apply flex mx-auto mt-4;
