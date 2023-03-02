@@ -27,7 +27,7 @@ export default function TaskList() {
     <section className="task-welcome">
       <p>
         Welcome to taskMaster, please fill out the form below and press the
-        CREATE TASK button to create your first task.
+        CREATE TASK button to create your tasks.
       </p>
       <div className="task-img-container">
         <img src={kidTaskMaster} alt="kid character" />
