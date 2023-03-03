@@ -10,9 +10,10 @@ let tasksFromlocalStorage = [];
 if (typeof window !== 'undefined') {
   // Check if we're running in the browser.
   // ✅ Only runs once per app load and before react render the component
-  tasksFromlocalStorage = JSON.parse(
-    localStorage.getItem('tasksToLocalStorage')
-  );
+  if (localStorage.getItem('tasksToLocalStorage'))
+    tasksFromlocalStorage = JSON.parse(
+      localStorage.getItem('tasksToLocalStorage')
+    );
 }
 
 export default function TaskProvider({ children }) {
