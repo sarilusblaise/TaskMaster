@@ -20,4 +20,7 @@ export default function taskReducer(tasks, action) {
   if (action.type === 'cleared') {
     return tasks.filter((task) => task.done !== true);
   }
+  if (action.type === 'storage') {
+    return action.payload;
+  }
 }
