@@ -51,6 +51,7 @@ main {
 .create-task-form {
   @apply flex flex-col gap-y-3 mx-auto;
   @apply w-11/12 xsm:w-9/12 md:w-6/12 lg:w-5/12;
+  
 }
 
 .create-task-form__input {
@@ -100,6 +101,7 @@ main {
 .task__textarea {
   @apply w-full italic py-2;
   overflow-y: hidden;
+
 }
 
 /*task welcome*/
