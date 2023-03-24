@@ -1,3 +1,24 @@
+# TaskMaster
+TaskMaster is a visually appealing  user-friendly task management app to help you stay organized, prioritize tasks, and achieve your goals.The app allow you create , edit and delete tasks.
+
+# Built with
+- React 
+- ESlint
+- CSS
+
+# Getting Started
+To get started with this project, follow the instructions below :
+
+1. Clone the project using git clone or just copy the command below:
+```bash
+git clone https://github.com/sarilusblaise/TaskMaster
+```
+ 2. Open the project with your favorite code editor 
+
+ 3. Run `npm install` install to get the dependencies
+# Live demo
+[click here](https://main--my-task-master.netlify.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
