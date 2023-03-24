@@ -40,7 +40,11 @@ export default function TaskItem({ task }) {
           />
         </div>
 
-        <button type="button" onClick={() => removeTask(task.id)}>
+        <button
+          title="delete task"
+          type="button"
+          onClick={() => removeTask(task.id)}
+        >
           <AiFillDelete className="icon" />
         </button>
       </div>
